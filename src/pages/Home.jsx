@@ -11,6 +11,7 @@ function Home({
     onAddToCart,
     isLoading,
 }) {
+    // Обработчик изменения сортировки
     const [sortBy, setSortBy] = useState('price');
     const [sortOrder, setSortOrder] = useState('asc');
 
@@ -22,7 +23,7 @@ function Home({
             setSortOrder('asc');
         }
     };
-
+    // Функция для рендеринга товаров
     const renderItems = () => {
         const filteredItems = items.filter((item) => item && item.title && item.title.toLowerCase().includes(searchValue.toLowerCase()));
 

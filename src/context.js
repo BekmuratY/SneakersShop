@@ -1,4 +1,7 @@
 import React from "react";
-export  const AppContext =  React.createContext({});
 
+// Создание контекста приложения с помощью React.createContext()
+export const AppContext = React.createContext({});
+
+// Экспорт созданного контекста
 export default AppContext;

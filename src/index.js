@@ -1,21 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
-import './index.scss';
-import 'macro-css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom/client'; // Импорт ReactDOM для работы с клиентским DOM
+import { BrowserRouter as Router } from 'react-router-dom'; // Импорт BrowserRouter для маршрутизации
+import './index.scss'; // Импорт стилей для основного файла
+import 'macro-css'; // Импорт стилей для макросов
+import App from './App'; // Импорт основного компонента приложения
+import reportWebVitals from './reportWebVitals'; // Импорт функции для отслеживания веб-показателей
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root')); // Создание корневого компонента ReactDOM
+
+// Рендеринг приложения в корневой DOM-элемент с использованием строгого режима React
 root.render(
   <React.StrictMode>
+    {/* Оборачиваем приложение в компонент Router для использования маршрутизации */}
     <Router>
-      <App />
-    </Router>
+      <App /> {/* Рендерим основной компонент приложения */}
+    </Router> 
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals(); // Запуск функции отслеживания веб-показателей
