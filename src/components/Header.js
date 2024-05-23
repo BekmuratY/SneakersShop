@@ -16,7 +16,7 @@ function Header(props) {
           <img width={40} height={40} src="/img/icon2.svg" alt="Cart" />
           <div className="headerInfo">
             <h3 className="text-uppercase">Sneakers Shop</h3>
-            <p className="opacity-5">Начните свое путешествие с комфортом</p>
+            <p className="opacity-5">Start your journey in comfort</p>
           </div>
         </div>
       </Link>
@@ -32,13 +32,10 @@ function Header(props) {
           <Link to="/favorites">
             <img width={18} height={18} src="/img/heart.svg" alt="Закладки" />
           </Link>
-          <span>Закладки</span>
+          <span>Bookmarks</span>
         </li>
         {/* Элемент пользователя */}
-        <li className="mr-30 cu-p">
-          <img width={18} height={18} src="/img/user.svg" alt="Пользователь" />
-          <span>Пользователь</span>
-        </li>
+        
       </ul>
     </header>
   );

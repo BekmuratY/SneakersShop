@@ -53,15 +53,15 @@ function Home({
     return (
         <div className="content p-40">
             <div className="d-flex align-center justify-between mb-20">
-                <h1>{searchValue ? `Поиск по запросу: "${searchValue}"` : "Каталог"}</h1>
+                <h1>{searchValue ? `Search by request:"${searchValue}"` : "Catalog"}</h1>
                 <div className="searsh-block d-flex">
                     <img src="/img/searsh.svg" alt="Search"></img>
-                    <input onChange={onChangeSearchInput} value={searchValue} placeholder="Поиск..."></input>
+                    <input onChange={onChangeSearchInput} value={searchValue} placeholder="Search..."></input>
                 </div> 
             </div>
             <div className= "mb-20">
-                    <button className = "sorting" onClick={() => handleSortChange('price')}>Сортировать по цене</button>
-                    <button className = "sorting" onClick={() => handleSortChange('title')}>Сортировать по алфавиту</button> 
+                    <button className = "sorting" onClick={() => handleSortChange('price')}>Sort by price</button>
+                    <button className = "sorting" onClick={() => handleSortChange('title')}>Sort alphabetically</button> 
                 </div>
 
             <div className="d-flex flex-wrap">

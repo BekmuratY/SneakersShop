@@ -49,7 +49,7 @@ function Drawer({ onClose, onRevome, items = [] }) {
     <div className="overlay">
       <div className="drawer">
         <h2 className="mb-30 d-flex justify-between ">
-          Корзина
+        Basket
           <img onClick={onClose} className="removeBtn cu-p" src="img/btn-remove.svg" alt="Close"></img>
         </h2>
         {/* Если в корзине есть товары */}
@@ -71,19 +71,19 @@ function Drawer({ onClose, onRevome, items = [] }) {
             <div className="cardTotalBlock mt-50">
               <ul>
                 <li>
-                  <span>Итого: </span>
+                  <span>Total: </span>
                   <div></div>
                   <b>{totalPrice}$ </b>
                 </li>
                 <li>
-                  <span>Налог 5%: </span>
+                  <span>Tax 5%: </span>
                   <div></div>
                   <b>{(totalPrice) / 100 * 5}$</b>
                 </li>
               </ul>
               {/* Кнопка для оформления заказа */}
               <button disabled={isLoading} onClick={onClickOrder} className="greenButton">
-                Оформить заказ 
+              Place an order 
                 <img src="/img/arrow.svg" alt="Arrow" /> 
               </button>
             </div>
@@ -91,8 +91,8 @@ function Drawer({ onClose, onRevome, items = [] }) {
         ) : (
           // Если корзина пуста
           <Info
-            title={isOrderComplete ? "Заказ оформлен!" : "Корзина пустая"}
-            description={isOrderComplete ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке` : "Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ."}
+            title={isOrderComplete ? "The order has been placed!" : "The basket is empty"}
+            description={isOrderComplete ? `Your order #${orderId} will be delivered by courier soon` : "Add at least one pair of sneakers to place an order."}
             image={isOrderComplete ? "/img/order.png" : "/img/empty-cart.jpg"}
           />
         )}

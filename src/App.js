@@ -30,7 +30,7 @@ function App() {
         setFavorites(favoritesResponse.data);
         setItems(itemsResponse.data); 
       } catch (error) {
-        alert("Ошибка сервера!");
+        alert("Server error!");
         console.error(error);
       }
     }
@@ -59,7 +59,7 @@ function App() {
       axios.delete(`https://6e208e995a32c491.mokky.dev/cart/${id}`); 
       setCartItems(prev => prev.filter(item => item.id !== id ));
     } catch (error) {
-      alert("Ошибка при удалении из корзины!");
+      alert("Error when deleting from the trash!");
       console.error(error);
     } 
   }
@@ -75,7 +75,7 @@ function App() {
         setFavorites(prev => [...prev, data ]); 
       }
     } catch (error) {
-      alert("Не удалось добавить в избранное")
+      alert("Couldn't add to favorites")
     }
   }
 

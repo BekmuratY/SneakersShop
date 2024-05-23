@@ -16,7 +16,7 @@ const Info = ({ title, image, description }) => {
       {/* Кнопка для закрытия сообщения или возврата на предыдущую страницу */}
       <button onClick={() => setCartOpened(false)} className="greenButton">
         <img src="img/arrow.svg" alt="Arrow" />
-        Вернуться назад
+        Go back
       </button>
     </div>
   );
